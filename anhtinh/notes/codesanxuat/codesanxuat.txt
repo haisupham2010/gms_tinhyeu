@@ -1,0 +1,25 @@
+// sản xuất mã màu begin
+Objrr_maso_qwr = {
+
+}
+
+globalvar so_ngau_nhien_ct,motlan_ms,ms_idice1,ms_idice2,ms_idice3,ms_idice4,ma_tam_so;
+// sử dụng cho công thức cá nhân
+so_ngau_nhien_ct = 0;
+
+with(Objrr_maso_qwr){
+obj_control.hocsinh.scr_creat_uuid_danhtinh_ini(); // sản xuất số định danh, tên game..
+motlan_ms = 0;
+obj_control.langquen.scr_maso_danhtinh();
+
+call_later(1,time_source_units_frames,obj_control.langquen.scr_maso_danhtinh,true)
+}
+
+// sản xuất mã màu end
+
+
+// code vẽ
+
+obj_control.hocsinh.scr_draw_color(400,400,70,20);
+
+draw_text(300,250,"danhtinh : " + obj_baoC.Objrr_maso_qwr.danh_tinh)
